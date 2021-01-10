@@ -23,7 +23,11 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div class="alert alert-info">
-<p><strong>{l s="login attempt failed" mod='loginascustomer'}</strong></p>
-<p>{l s="Please retry by using your admin panel." mod='loginascustomer'}</p>
-</div>
+{extends file='page.tpl'}
+
+{block name="page_content"}
+    <h2>{l s='Unauthorized' mod='loginas'}</h2>
+    <p class="alert alert-danger">
+        {l s='You are not authorized to use this feature' mod='loginas'}
+    </p>
+{/block}
