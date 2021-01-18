@@ -48,7 +48,7 @@ class LoginAsCustomerLoginModuleFrontController extends ModuleFrontControllerCor
                 Tools::redirect('index.php?controller=my-account');
             }
         }
-        $this->setTemplate('failed.tpl');
+        $this->setTemplate('module:loginascustomer/views/templates/front/failed.tpl');
     }
 
 }
