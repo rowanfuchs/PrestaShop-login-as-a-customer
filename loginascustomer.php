@@ -57,7 +57,7 @@ class LoginAsCustomer extends Module
 
 	public function hookDisplayAdminCustomers($request)
     {
-        $customer = New CustomerCore ($request['request']->get('customerId'));
+        $customer = New CustomerCore ($request['id_customer']);
         $link = $this->context->link->getModuleLink($this->name, 'login', array('id_customer' => $customer->id, 'xtoken' => $this->makeToken($customer->id)));
 
         if (!Validate::isLoadedObject($customer)) {
